@@ -1,0 +1,134 @@
+/* ===== CATEGORY HERO SECTIONS ===== */
+
+/* CSS umum untuk category hero */
+.category-hero {
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.category-hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.stat .label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Background colors untuk setiap kategori */
+.jacket-hero {
+    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+}
+
+.celana-hero {
+    background: linear-gradient(135deg, #2980B9 0%, #3498DB 100%);
+}
+
+.tshirt-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.baju-bola-hero {
+    background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+}
+
+/* ===== CATEGORY FILTER SECTION ===== */
+.category-filter-section {
+    padding: 40px 0;
+    background: #f8f9fa;
+}
+
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-filter-btn {
+    padding: 12px 25px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.category-filter-btn.active,
+.category-filter-btn:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* ===== PRODUCTS SECTION ===== */
+.category-products {
+    padding: 60px 0;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.products-header h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+.products-count {
+    color: #7f8c8d;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Tambahkan style lainnya yang diperlukan... */

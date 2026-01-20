@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baju Bola Collection - HAVEN</title>
+    <link rel="stylesheet" href="stayle.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    .bajubola-hero {
+    background-image: url('BOLA.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    color: white;
+    position: relative;
+}
+
+/* Overlay biar teks makin jelas */
+.bajubola-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.bajubola-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+</style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>HAVEN</h2>
+                </div>
+         <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li class="produk-item">
+                        <a href="javascript:void(0)" class="produk-toggle" onclick="toggleMenu()">Produk </a>
+                        <ul class="produk-list" id="produkMenu">
+                             
+                            <li><a href="jacket.html">Jacket</a></li>
+                            <li><a href="celana.html">Celana</a></li>
+                            <li><a href="kaos.html">Kaos</a></li>
+                            <li><a href="bajubola.html">Baju bola</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#size-guide">Panduan Ukuran</a></li>
+                    <li><a href="index.html#about">Tentang Kami</a></li>
+                    <li><a href="index.html#contact">Kontak</a></li>
+                
+                <!-- Search Bar -->
+                <li class="search-box">
+                    <input type="text" placeholder="Cari baju bola..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </li>
+                   
+                <!-- User Menu -->
+                <li class="user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <i class="fas fa-user"></i>
+                            <span class="user-name">Guest</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" class="login-btn">Login</a>
+                            <a href="#" class="register-btn">Daftar</a>
+                            <div class="logged-in-menu" style="display: none;">
+                                <a href="#" class="profile-btn">Profile</a>
+                                <a href="orders.php" class="orders-btn">Pesanan Saya</a>
+                                <a href="#" class="logout-btn">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Cart Icon -->
+                <li class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </li>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Baju Bola Hero Section -->
+    <section class="category-hero bajubola-hero">
+        <div class="container">
+            <h1>Premium Baju Bola Collection</h1>
+            <p>Temukan jersey dan baju bola berkualitas dengan desain tim favorit Anda untuk performa maksimal di lapangan</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="number">20+</span>
+                    <span class="label">Klub & Negara</span>
+                </div>
+                <div class="stat">
+                    <span class="number">100%</span>
+                    <span class="label">Bahan Breathable</span>
+                </div>
+                <div class="stat">
+                    <span class="number">Official</span>
+                    <span class="label">Lisensi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Baju Bola Categories -->
+    <section class="category-filter-section">
+        <div class="container">
+            <div class="category-filters">
+                <button class="category-filter-btn active" data-category="all">Semua Baju Bola</button>
+                <button class="category-filter-btn" data-category="premier-league">Premier League</button>
+                <button class="category-filter-btn" data-category="la-liga">La Liga</button>
+                <button class="category-filter-btn" data-category="serie-a">Serie A</button>
+                <button class="category-filter-btn" data-category="bundesliga">Bundesliga</button>
+                <button class="category-filter-btn" data-category="national">Tim Nasional</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Baju Bola Products -->
+    <section class="category-products">
+        <div class="container">
+            <div class="products-header">
+                <h2>Semua Produk Baju Bola</h2>
+                <div class="products-count">
+                    <span>Menampilkan 12 produk</span>
+                </div>
+            </div>
+
+            <div class="products-grid bajubola-grid">
+                <!-- Baju Bola 1 -->
+                <div class="product-card bajubola-card" data-category="premier-league">
+                    <div class="product-badge">BEST SELLER</div>
+                    <div class="product-image">
+                        <img src="baju-bola-1.jpg" alt="Jersey Manchester United Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="1">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Manchester United Home 2024</h3>
+                        <p class="product-material">100% Polyester Dri-FIT</p>
+                        <p class="product-description">Jersey home kit musim 2024 dengan teknologi keringat cepat dan desain klasik merah</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Official Licensed</span>
+                            <span class="feature">✓ Moisture Wicking</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 499.000</span>
+                            <span class="original-price">Rp 599.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="1" data-name="Jersey Manchester United Home 2024" data-price="499000" data-image="baju-bola-1.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="1">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 2 -->
+                <div class="product-card bajubola-card" data-category="premier-league">
+                    <div class="product-badge">NEW DESIGN</div>
+                    <div class="product-image">
+                        <img src="baju-bola-2.jpg" alt="Jersey Liverpool Away 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="2">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="2">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Liverpool Away 2024</h3>
+                        <p class="product-material">Nike Dri-FIT Technology</p>
+                        <p class="product-description">Jersey away kit dengan desain modern dan bahan yang ringan untuk performa optimal</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Lightweight</span>
+                            <span class="feature">✓ Breathable</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 529.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="2" data-name="Jersey Liverpool Away 2024" data-price="529000" data-image="baju-bola-2.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="2">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 3 -->
+                <div class="product-card bajubola-card" data-category="la-liga">
+                    <div class="product-badge">CLASSIC</div>
+                    <div class="product-image">
+                        <img src="baju-bola-3.jpg" alt="Jersey Barcelona Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="3">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="3">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Barcelona Home 2024</h3>
+                        <p class="product-material">Nike AeroSwift Technology</p>
+                        <p class="product-description">Jersey home kit dengan warna merah-biru ikonik dan teknologi aeroswift untuk kenyamanan maksimal</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Quick Dry</span>
+                            <span class="feature">✓ Flexible Fit</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 549.000</span>
+                            <span class="original-price">Rp 649.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="3" data-name="Jersey Barcelona Home 2024" data-price="549000" data-image="baju-bola-3.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="3">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 4 -->
+                <div class="product-card bajubola-card" data-category="la-liga">
+                    <div class="product-image">
+                        <img src="baju-bola-4.jpg" alt="Jersey Real Madrid Third 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="4">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="4">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Real Madrid Third 2024</h3>
+                        <p class="product-material">Adidas HEAT.RDY</p>
+                        <p class="product-description">Jersey third kit dengan desain elegan dan teknologi pendinginan untuk pertandingan intens</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Heat Control</span>
+                            <span class="feature">✓ Stretch Material</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 579.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="4" data-name="Jersey Real Madrid Third 2024" data-price="579000" data-image="baju-bola-4.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="4">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 5 -->
+                <div class="product-card bajubola-card" data-category="serie-a">
+                    <div class="product-badge">SALE</div>
+                    <div class="product-image">
+                        <img src="baju-bola-5.jpg" alt="Jersey AC Milan Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="5">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="5">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey AC Milan Home 2024</h3>
+                        <p class="product-material">Puma ULTRAWEAVE</p>
+                        <p class="product-description">Jersey home kit dengan garis merah-hitam ikonik dan bahan ultra ringan untuk mobilitas tinggi</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Ultra Light</span>
+                            <span class="feature">✓ Four-way Stretch</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 479.000</span>
+                            <span class="original-price">Rp 579.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="5" data-name="Jersey AC Milan Home 2024" data-price="479000" data-image="baju-bola-5.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="5">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 6 -->
+                <div class="product-card bajubola-card" data-category="serie-a">
+                    <div class="product-image">
+                        <img src="baju-bola-6.jpg" alt="Jersey Inter Milan Away 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="6">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="6">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Inter Milan Away 2024</h3>
+                        <p class="product-material">Nike Dri-FIT ADV</p>
+                        <p class="product-description">Jersey away kit dengan desain modern dan teknologi pengeringan lanjutan untuk kenyamanan penuh</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Advanced Dri-FIT</span>
+                            <span class="feature">✓ Comfort Max</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 529.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="6" data-name="Jersey Inter Milan Away 2024" data-price="529000" data-image="baju-bola-6.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="6">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 7 -->
+                <div class="product-card bajubola-card" data-category="bundesliga">
+                    <div class="product-badge">PREMIUM</div>
+                    <div class="product-image">
+                        <img src="baju-bola-7.jpg" alt="Jersey Bayern Munich Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="7">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="7">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Bayern Munich Home 2024</h3>
+                        <p class="product-material">Adidas PRIMEKNIT</p>
+                        <p class="product-description">Jersey home kit dengan teknologi primeknit untuk fleksibilitas maksimal dan kenyamanan tak tertandingi</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Primeknit Tech</span>
+                            <span class="feature">✓ Seamless Design</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 599.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="7" data-name="Jersey Bayern Munich Home 2024" data-price="599000" data-image="baju-bola-7.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="7">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 8 -->
+                <div class="product-card bajubola-card" data-category="bundesliga">
+                    <div class="product-image">
+                        <img src="baju-bola-8.jpg" alt="Jersey Borussia Dortmund Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="8">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="8">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Borussia Dortmund Home 2024</h3>
+                        <p class="product-material">Puma ULTRAWEAVE Pro</p>
+                        <p class="product-description">Jersey home kit dengan warna kuning-hitam yang iconic dan teknologi anyaman ultra untuk performa tinggi</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Pro Performance</span>
+                            <span class="feature">✓ Enhanced Breathability</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 549.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="8" data-name="Jersey Borussia Dortmund Home 2024" data-price="549000" data-image="baju-bola-8.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="8">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 9 -->
+                <div class="product-card bajubola-card" data-category="national">
+                    <div class="product-badge">HOT</div>
+                    <div class="product-image">
+                        <img src="baju-bola-9.jpg" alt="Jersey Timnas Indonesia Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="9">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="9">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Timnas Indonesia Home 2024</h3>
+                        <p class="product-material">Nike Dri-FIT Technology</p>
+                        <p class="product-description">Jersey home kit Garuda dengan desain merah-putih dan teknologi keringat cepat untuk dukungan maksimal</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Official PSSI</span>
+                            <span class="feature">✓ Player Version</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 449.000</span>
+                            <span class="original-price">Rp 549.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="9" data-name="Jersey Timnas Indonesia Home 2024" data-price="449000" data-image="baju-bola-9.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="9">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 10 -->
+                <div class="product-card bajubola-card" data-category="national">
+                    <div class="product-image">
+                        <img src="baju-bola-10.jpg" alt="Jersey Brazil Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="10">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="10">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Brazil Home 2024</h3>
+                        <p class="product-material">Nike AeroSwift Pro</p>
+                        <p class="product-description">Jersey home kit Seleção dengan desain kuning-hijau klasik dan teknologi aeroswift profesional</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Pro Cut</span>
+                            <span class="feature">✓ Lightweight Construction</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 579.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="10" data-name="Jersey Brazil Home 2024" data-price="579000" data-image="baju-bola-10.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="10">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 11 -->
+                <div class="product-card bajubola-card" data-category="premier-league">
+                    <div class="product-badge">NEW</div>
+                    <div class="product-image">
+                        <img src="baju-bola-11.jpg" alt="Jersey Chelsea Third 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="11">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="11">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Chelsea Third 2024</h3>
+                        <p class="product-material">Nike VaporKnit</p>
+                        <p class="product-description">Jersey third kit dengan desain modern dan teknologi vaporknit untuk kenyamanan dan performa terbaik</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ VaporKnit Tech</span>
+                            <span class="feature">✓ Ergonomic Fit</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 549.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="11" data-name="Jersey Chelsea Third 2024" data-price="549000" data-image="baju-bola-11.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="11">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baju Bola 12 -->
+                <div class="product-card bajubola-card" data-category="la-liga">
+                    <div class="product-image">
+                        <img src="baju-bola-12.jpg" alt="Jersey Atletico Madrid Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="12">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="12">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Atletico Madrid Home 2024</h3>
+                        <p class="product-material">Nike Stadium Technology</p>
+                        <p class="product-description">Jersey home kit dengan garis merah-putih khas dan teknologi stadion untuk kenyamanan bertanding</p>
+                        
+                        <div class="product-features">
+                            <span class="feature">✓ Stadium Fit</span>
+                            <span class="feature">✓ Durable Material</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">Rp 499.000</span>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="12" data-name="Jersey Atletico Madrid Home 2024" data-price="499000" data-image="baju-bola-12.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="12">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+           
+    </section>
+
+    <!-- Baju Bola Features Section -->
+    <section class="category-features">
+        <div class="container">
+            <h2>Mengapa Memilih Baju Bola Kami?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-medal"></i>
+                    <h4>Official Licensed</h4>
+                    <p>Produk original dengan lisensi resmi dari klub dan federasi sepak bola</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-wind"></i>
+                    <h4>Bahan Breathable</h4>
+                    <p>Menggunakan teknologi Dri-FIT dan bahan breathable untuk kenyamanan maksimal saat bermain</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tshirt"></i>
+                    <h4>Desain Authentic</h4>
+                    <p>Desain sesuai dengan jersey asli yang digunakan pemain di lapangan</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-award"></i>
+                    <h4>Kualitas Terjamin</h4>
+                    <p>Setiap produk melalui quality control ketat untuk memastikan kualitas terbaik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HAVEN FASHION</h3>
+                    <p>Style Your Perfect Look</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#menu">Koleksi</a></li>
+                        <li><a href="index.html#size-guide">Panduan Ukuran</a></li>
+                        <li><a href="index.html#about">Tentang Kami</a></li>
+                        <li><a href="index.html#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kategori</h4>
+                    <ul>
+                         <li><a href="#menu">Rekomendasi</a></li>
+                        <li><a href="jacket.html">Jacket</a></li>
+                        <li><a href="celana.html">Celana</a></li>
+                        <li><a href="kaos.html">Kaos</a></li>
+                        <li><a href="bajubola.html">Baju bola</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-headset"></i> Customer Service 24/7</p>
+                        <p><i class="fas fa-shipping-fast"></i> Gratis Ongkir</p>
+                        <p><i class="fas fa-shield-alt"></i> Garansi 30 Hari</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 HAVEN FASHION. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ✅ COPY MODAL STRUCTURE DARI INDEX.HTML -->
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <button class="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Keranjang belanja Anda kosong</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span>Rp 0</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login ke Akun Anda</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn primary">Login</button>
+                <p class="form-footer">
+                    Belum punya akun? <a href="#" class="switch-to-register">Daftar di sini</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Daftar Akun Baru</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="registerName">Nama Lengkap</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Nomor Telepon</label>
+                    <input type="tel" id="registerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Konfirmasi Password</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn primary">Daftar</button>
+                <p class="form-footer">
+                    Sudah punya akun? <a href="#" class="switch-to-login">Login di sini</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Profil Saya</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="profile-content">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/100" alt="Avatar" id="profileAvatar">
+                        <button class="change-avatar-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h4 id="profileName">Nama Pengguna</h4>
+                        <p id="profileEmail">email@example.com</p>
+                        <p id="profilePhone">+62 812-3456-7890</p>
+                    </div>
+                </div>
+                
+                <form class="profile-form">
+                    <div class="form-section">
+                        <h4>Informasi Pribadi</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileNameInput">Nama Lengkap *</label>
+                                <input type="text" id="profileNameInput" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePhoneInput">Nomor Telepon *</label>
+                                <input type="tel" id="profilePhoneInput" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileEmailInput">Email *</label>
+                            <input type="email" id="profileEmailInput" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileBirthDate">Tanggal Lahir</label>
+                            <input type="date" id="profileBirthDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Jenis Kelamin</label>
+                            <div class="gender-options">
+                                <label class="option-card">
+                                    <input type="radio" name="gender" value="male">
+                                    <div class="option-content">
+                                        <i class="fas fa-male"></i>
+                                        <span>Laki-laki</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="gender" value="female">
+                                    <div class="option-content">
+                                        <i class="fas fa-female"></i>
+                                        <span>Perempuan</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>Alamat Utama</h4>
+                        <div class="form-group">
+                            <label for="profileAddress">Alamat Lengkap *</label>
+                            <textarea id="profileAddress" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileProvince">Provinsi</label>
+                                <input type="text" id="profileProvince">
+                            </div>
+                            <div class="form-group">
+                                <label for="profileCity">Kota</label>
+                                <input type="text" id="profileCity">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileDistrict">Kecamatan</label>
+                                <input type="text" id="profileDistrict">
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePostalCode">Kode Pos</label>
+                                <input type="text" id="profilePostalCode">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>Ubah Password</h4>
+                        <div class="form-group">
+                            <label for="currentPassword">Password Saat Ini</label>
+                            <input type="password" id="currentPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">Password Baru</label>
+                            <input type="password" id="newPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Konfirmasi Password Baru</label>
+                            <input type="password" id="confirmNewPassword">
+                        </div>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button type="button" class="btn secondary cancel-profile">Batal</button>
+                        <button type="submit" class="btn primary save-profile">Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Checkout Pesanan</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="checkout-content">
+                <!-- Ringkasan Pesanan -->
+                <div class="order-summary">
+                    <h4>Ringkasan Pesanan</h4>
+                    <div class="summary-items">
+                        <!-- Items akan diisi secara dinamis -->
+                    </div>
+                    <div class="summary-total">
+                        <strong>Total: Rp <span class="total-amount">0</span></strong>
+                    </div>
+                </div>
+
+                <!-- Form Data Pengiriman -->
+                <form class="checkout-form">
+                    <div class="form-section">
+                        <h4>Data Diri</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customerName">Nama Lengkap *</label>
+                                <input type="text" id="customerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerPhone">No. Telepon *</label>
+                                <input type="tel" id="customerPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Email</label>
+                            <input type="email" id="customerEmail">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Metode Pengambilan</h4>
+                        <div class="delivery-options">
+                            <label class="option-card">
+                                <input type="radio" name="deliveryMethod" value="takeaway" checked>
+                                <div class="option-content">
+                                    <i class="fas fa-store"></i>
+                                    <span>Take Away</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="deliveryMethod" value="delivery">
+                                <div class="option-content">
+                                    <i class="fas fa-motorcycle"></i>
+                                    <span>Delivery</span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <!-- Form Alamat (muncul jika delivery dipilih) -->
+                        <div class="delivery-address" style="display: none;">
+                            <div class="form-group">
+                                <label for="deliveryAddress">Alamat Lengkap *</label>
+                                <textarea id="deliveryAddress" rows="3" placeholder="Masukkan alamat lengkap pengiriman"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryNote">Catatan untuk Kurir</label>
+                                <textarea id="deliveryNote" rows="2" placeholder="Contoh: Rumah warna hijau, dekat warung"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Metode Pembayaran</h4>
+                        <div class="payment-options">
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="cash" checked>
+                                <div class="option-content">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Cash</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="qris">
+                                <div class="option-content">
+                                    <i class="fas fa-qrcode"></i>
+                                    <span>QRIS</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="bank_transfer">
+                                <div class="option-content">
+                                    <i class="fas fa-university"></i>
+                                    <span>Transfer Bank</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="ewallet">
+                                <div class="option-content">
+                                    <i class="fas fa-wallet"></i>
+                                    <span>E-Wallet</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button type="button" class="btn secondary back-to-cart">Kembali ke Keranjang</button>
+                        <button type="submit" class="btn primary proceed-payment">Lanjutkan ke Pembayaran</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Pembayaran</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="payment-content">
+                <div class="payment-instruction">
+                    <h4>Silakan selesaikan pembayaran Anda</h4>
+                    <div class="payment-details">
+                        <!-- Detail pembayaran akan diisi berdasarkan metode yang dipilih -->
+                    </div>
+                </div>
+                <div class="payment-actions">
+                    <button type="button" class="btn secondary cancel-payment">Batalkan</button>
+                    <button type="button" class="btn primary confirm-payment">Saya Sudah Bayar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+
+    <!-- ✅ INCLUDE SCRIPT.JS UTAMA (SAMA SEPERTI INDEX.HTML) -->
+    <script src="script.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

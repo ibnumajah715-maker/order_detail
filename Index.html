@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAVEN - Fashion Store</title>
+    <link rel="stylesheet" href="stayle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>HAVEN</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li class="produk-item">
+                        <a href="javascript:void(0)" class="produk-toggle" onclick="toggleMenu()">Produk </a>
+                        <ul class="produk-list" id="produkMenu">
+                            <li><a href="jacket.html">Jacket</a></li>
+                            <li><a href="celana.html">Celana</a></li>
+                            <li><a href="kaos.html">Kaos</a></li>
+                            <li><a href="bajubola.html">Baju bola</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#size-guide">Panduan Ukuran</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+
+                    <!-- Search Bar -->
+                    <li class="search-box">
+                        <input type="text" placeholder="Cari produk..." class="search-input">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </li>
+
+                    <!-- User Menu -->
+                    <li class="user-menu">
+                        <div class="user-dropdown">
+                            <button class="user-btn">
+                                <i class="fas fa-user"></i>
+                                <span class="user-name">Guest</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#" class="login-btn">Login</a>
+                                <a href="#" class="register-btn">Daftar</a>
+                                <div class="logged-in-menu" style="display: none;">
+                                    <a href="#" class="profile-btn">Profile</a>
+                                    <a href="orders.php" class="orders-btn">Pesanan Saya</a>
+                                    <a href="#" class="logout-btn">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Cart Icon -->
+                    <li class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section dengan Video -->
+    <section id="home" class="hero">
+        <!-- Video Background -->
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="faris.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video HTML5.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Haven Fashion </h1>
+            <p>Temukan gaya terbaikmu dengan koleksi baju terbaru dari brand ternama</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn primary">Cek Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Gratis Ongkir</h3>
+                    <p>Gratis pengiriman untuk order di atas Rp 500.000</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Garansi 30 Hari</h3>
+                    <p>Garansi pengembalian dalam 30 hari</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Pembayaran Aman</h3>
+                    <p>Berbagai metode pembayaran yang aman</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Customer Service 24/7</h3>
+                    <p>Layanan pelanggan siap membantu Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Baju & Outfit Shop</h2>
+
+            <!-- Filter Kategori -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">Semua</button>
+                <button class="filter-btn" data-category="jacket">Jacket</button>
+                <button class="filter-btn" data-category="celana">Celana</button>
+                <button class="filter-btn" data-category="baju-bola">Baju Bola</button>
+                <button class="filter-btn" data-category="kaos">Kaos</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid">
+
+                <!-- Jacket -->
+                <div class="menu-item" data-category="jacket">
+                    <div class="product-badge">BEST SELLER</div>
+                    <div class="product-image">
+                        <img src="Denim Jacket.jpeg" alt="Jacket Denim Classic">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="1">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jacket Denim Classic</h3>
+                        <p class="product-material">100% Cotton Denim</p>
+                        <p class="product-description">Jacket denim berkualitas tinggi dengan desain klasik yang cocok
+                            untuk berbagai kesempatan</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Water Resistant</span>
+                            <span class="feature">✓ Multiple Pockets</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 299.000</span>
+                            <span class="original-price">Rp 399.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="1" data-name="Jacket Denim Classic" data-price="299000"
+                                data-image="Denim Jacket.jpeg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="1">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="jacket">
+                    <div class="product-badge">PREMIUM</div>
+                    <div class="product-image">
+                        <img src="Jacket Kulit Premium.jpeg" alt="Jacket Kulit Premium">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="2">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="2">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jacket Kulit Premium</h3>
+                        <p class="product-material">Genuine Leather</p>
+                        <p class="product-description">Jacket kulit asli dengan desain modern dan nyaman dipakai,
+                            memberikan kesan stylish</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Genuine Leather</span>
+                            <span class="feature">✓ Lining Included</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 599.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="2" data-name="Jacket Kulit Premium" data-price="599000"
+                                data-image="Jacket Kulit Premium.jpeg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="2">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="jacket">
+                    <div class="product-badge">NEW</div>
+                    <div class="product-image">
+                        <img src="Jacket Bomber Sporty.jpeg" alt="Jacket Bomber Sporty">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="12">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="12">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jacket Bomber Sporty</h3>
+                        <p class="product-material">Nylon & Polyester</p>
+                        <p class="product-description">Jacket bomber dengan desain sporty dan bahan yang ringan, cocok
+                            untuk cuaca dingin</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Lightweight</span>
+                            <span class="feature">✓ Waterproof</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 329.000</span>
+                            <span class="original-price">Rp 399.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="12" data-name="Jacket Bomber Sporty"
+                                data-price="329000" data-image="Jacket Bomber Sporty.jpeg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="12">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Celana -->
+                <div class="menu-item" data-category="celana">
+                    <div class="product-badge">PREMIUM</div>
+                    <div class="product-image">
+                        <img src="Celana Cargo Military.jpg" alt="Celana Chino Slim">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="7">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="7">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Celana Chino Slim</h3>
+                        <p class="product-material">Stretch Cotton</p>
+                        <p class="product-description">Celana chino slim fit dengan bahan stretch untuk mobilitas dan
+                            kenyamanan maksimal</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Slim Fit</span>
+                            <span class="feature">✓ Stretch Fabric</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 219.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="28">28</span>
+                                <span class="size-option" data-size="30">30</span>
+                                <span class="size-option" data-size="32">32</span>
+                                <span class="size-option" data-size="34">34</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="7" data-name="Celana Chino Slim" data-price="219000"
+                                data-image="Celana Cargo Military.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="7">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Celana 6 -->
+                <div class="menu-item" data-category="celana">
+                    <div class="product-image">
+                        <img src="Celana Chino Slim.jpg" alt="Celana Jeans Relaxed Fit">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="6">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="6">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Celana Jeans Relaxed Fit</h3>
+                        <p class="product-material">Stretch Denim</p>
+                        <p class="product-description">Celana jeans dengan fit relaxed yang memberikan kenyamanan
+                            maksimal sepanjang hari</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Relaxed Fit</span>
+                            <span class="feature">✓ Flexible Material</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 269.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="30">30</span>
+                                <span class="size-option" data-size="32">32</span>
+                                <span class="size-option" data-size="34">34</span>
+                                <span class="size-option" data-size="36">36</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="6" data-name="Celana Jeans Relaxed Fit"
+                                data-price="269000" data-image="Celana Chino Slim.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="6">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="celana">
+                    <div class="product-image">
+                        <img src="Celana Training Sporty.jpg" alt="Celana Cargo Military">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="8">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="8">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Celana Cargo Military</h3>
+                        <p class="product-material">Durable Canvas</p>
+                        <p class="product-description">Celana cargo dengan gaya military yang kuat dan tahan lama untuk
+                            aktivitas outdoor</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Reinforced Stitching</span>
+                            <span class="feature">✓ Heavy Duty</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 269.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="28">28</span>
+                                <span class="size-option" data-size="30">30</span>
+                                <span class="size-option" data-size="32">32</span>
+                                <span class="size-option" data-size="34">34</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="8" data-name="Celana Cargo Military"
+                                data-price="269000" data-image="Celana Training Sporty.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="8">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baju Bola -->
+                <div class="menu-item" data-category="baju-bola">
+                    <div class="product-badge">BEST SELLER</div>
+                    <div class="product-image">
+                        <img src="Manchester United.jpg" alt="Jersey Manchester United Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="1">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Manchester United Home 2024</h3>
+                        <p class="product-material">100% Polyester Dri-FIT</p>
+                        <p class="product-description">Jersey home kit musim 2024 dengan teknologi keringat cepat dan
+                            desain klasik merah</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Official Licensed</span>
+                            <span class="feature">✓ Moisture Wicking</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 499.000</span>
+                            <span class="original-price">Rp 599.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="1" data-name="Jersey Manchester United Home 2024"
+                                data-price="499000" data-image="Manchester United.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="1">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-category="baju-bola">
+                    <div class="product-badge">NEW DESIGN</div>
+                    <div class="product-image">
+                        <img src="Liverpool Away.jpg" alt="Jersey Liverpool Away 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="2">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="2">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Liverpool Away 2024</h3>
+                        <p class="product-material">Nike Dri-FIT Technology</p>
+                        <p class="product-description">Jersey away kit dengan desain modern dan bahan yang ringan untuk
+                            performa optimal</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Lightweight</span>
+                            <span class="feature">✓ Breathable</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 529.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="2" data-name="Jersey Liverpool Away 2024"
+                                data-price="529000" data-image="Liverpool Away.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="2">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="baju-bola">
+                    <div class="product-badge">CLASSIC</div>
+                    <div class="product-image">
+                        <img src="Barcelona Home.jpg" alt="Jersey Barcelona Home 2024">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="3">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="3">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jersey Barcelona Home 2024</h3>
+                        <p class="product-material">Nike AeroSwift Technology</p>
+                        <p class="product-description">Jersey home kit dengan warna merah-biru ikonik dan teknologi
+                            aeroswift untuk kenyamanan maksimal</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Quick Dry</span>
+                            <span class="feature">✓ Flexible Fit</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 549.000</span>
+                            <span class="original-price">Rp 649.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="3" data-name="Jersey Barcelona Home 2024"
+                                data-price="549000" data-image="Barcelona Home.jpg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="3">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Kaos -->
+                <div class="menu-item" data-category="kaos">
+                    <div class="product-image">
+                        <img src="Oversized Tee Comfort.jpeg" alt="Oversized Tee Comfort">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="4">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="4">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Oversized Tee Comfort</h3>
+                        <p class="product-material">Soft Cotton Blend</p>
+                        <p class="product-description">Kaos oversized dengan potongan yang nyaman dan trendy, perfect
+                            untuk street style</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Relaxed Fit</span>
+                            <span class="feature">✓ Dropped Shoulder</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 119.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="4" data-name="Oversized Tee Comfort"
+                                data-price="119000" data-image="Oversized Tee Comfort.jpeg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="4">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="kaos">
+                    <div class="product-badge">CLASSIC</div>
+                    <div class="product-image">
+                        <img src="kaos polo.jpeg" alt="Polo Shirt Classic">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="3">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="3">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Polo Shirt Classic</h3>
+                        <p class="product-material">Pique Cotton</p>
+                        <p class="product-description">Polo shirt dengan bahan pique cotton yang nyaman, cocok untuk
+                            semi-formal dan kasual</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Collar Stay</span>
+                            <span class="feature">✓ Button Placket</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 159.000</span>
+                            <span class="original-price">Rp 199.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="3" data-name="Polo Shirt Classic" data-price="159000"
+                                data-image="kaos polo.jpeg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="3">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="kaos">
+                    <div class="product-badge">NEW DESIGN</div>
+                    <div class="product-image">
+                        <img src="Earl’s Oysters Graphic Tee.jpeg" alt="Graphic Tee Urban">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="2">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-id="2">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Graphic Tee Urban</h3>
+                        <p class="product-material">100% Cotton</p>
+                        <p class="product-description">Kaos dengan desain grafis urban yang trendy, cocok untuk gaya
+                            kasual sehari-hari</p>
+
+                        <div class="product-features">
+                            <span class="feature">✓ Premium Print</span>
+                            <span class="feature">✓ Color Fast</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">Rp 129.000</span>
+                        </div>
+
+                        <div class="size-selection">
+                            <span class="size-label">Pilih Ukuran:</span>
+                            <div class="size-options">
+                                <span class="size-option" data-size="S">S</span>
+                                <span class="size-option" data-size="M">M</span>
+                                <span class="size-option" data-size="L">L</span>
+                                <span class="size-option" data-size="XL">XL</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" data-id="2" data-name="Graphic Tee Urban" data-price="129000"
+                                data-image="Earl’s Oysters Graphic Tee.jpeg">
+                                <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                            </button>
+                            <button class="buy-now" data-id="2">
+                                <i class="fas fa-bolt"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Simple Size Guide Section -->
+    <section id="size-guide" class="size-guide-section"> <!-- UBAH ID MENJADI size-guide -->
+        <div class="container">
+            <h2 class="section-title">📏 Panduan Ukuran</h2>
+
+            <div class="size-guide-grid">
+
+                <!-- Kaos & Atasan -->
+                <div class="size-category">
+                    <h3>👕 Kaos & Atasan</h3>
+                    <div class="size-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ukuran</th>
+                                    <th>Lebar Dada</th>
+                                    <th>Panjang</th>
+                                    <th>Rekomendasi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>S</strong></td>
+                                    <td>46-48 cm</td>
+                                    <td>66-68 cm</td>
+                                    <td>155-165 cm<br>45-55 kg</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>M</strong></td>
+                                    <td>48-50 cm</td>
+                                    <td>68-70 cm</td>
+                                    <td>165-170 cm<br>55-65 kg</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>L</strong></td>
+                                    <td>50-52 cm</td>
+                                    <td>70-72 cm</td>
+                                    <td>170-175 cm<br>65-75 kg</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>XL</strong></td>
+                                    <td>52-54 cm</td>
+                                    <td>72-74 cm</td>
+                                    <td>175-180 cm<br>75-85 kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Celana -->
+                <div class="size-category">
+                    <h3>👖 Celana</h3>
+                    <div class="size-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ukuran</th>
+                                    <th>Pinggang</th>
+                                    <th>Pinggul</th>
+                                    <th>Panjang</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>28</strong></td>
+                                    <td>71-74 cm</td>
+                                    <td>86-89 cm</td>
+                                    <td>99-101 cm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>30</strong></td>
+                                    <td>76-79 cm</td>
+                                    <td>91-94 cm</td>
+                                    <td>101-103 cm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>32</strong></td>
+                                    <td>81-84 cm</td>
+                                    <td>96-99 cm</td>
+                                    <td>103-105 cm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>34</strong></td>
+                                    <td>86-89 cm</td>
+                                    <td>101-104 cm</td>
+                                    <td>105-107 cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Jacket -->
+                <div class="size-category">
+                    <h3>🧥 Jacket</h3>
+                    <div class="size-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ukuran</th>
+                                    <th>Lebar Dada</th>
+                                    <th>Panjang</th>
+                                    <th>Lengan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>S</strong></td>
+                                    <td>50-52 cm</td>
+                                    <td>68-70 cm</td>
+                                    <td>60-62 cm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>M</strong></td>
+                                    <td>52-54 cm</td>
+                                    <td>70-72 cm</td>
+                                    <td>62-64 cm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>L</strong></td>
+                                    <td>54-56 cm</td>
+                                    <td>72-74 cm</td>
+                                    <td>64-66 cm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>XL</strong></td>
+                                    <td>56-58 cm</td>
+                                    <td>74-76 cm</td>
+                                    <td>66-68 cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Baju Bola -->
+                <div class="size-category">
+                    <h3>⚽ Baju Bola</h3>
+                    <div class="size-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ukuran</th>
+                                    <th>Lebar Dada</th>
+                                    <th>Panjang</th>
+                                    <th>Fit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>S</strong></td>
+                                    <td>48-50 cm</td>
+                                    <td>68-70 cm</td>
+                                    <td>Athletic</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>M</strong></td>
+                                    <td>50-52 cm</td>
+                                    <td>70-72 cm</td>
+                                    <td>Athletic</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>L</strong></td>
+                                    <td>52-54 cm</td>
+                                    <td>72-74 cm</td>
+                                    <td>Regular</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>XL</strong></td>
+                                    <td>54-56 cm</td>
+                                    <td>74-76 cm</td>
+                                    <td>Regular</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tips Section -->
+            <div class="size-tips">
+                <h3>💡 Tips Memilih Ukuran</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">👕</div>
+                        <div class="tip-content">
+                            <h4>Kaos & Atasan</h4>
+                            <p>Pilih ukuran biasa untuk regular fit. Size up untuk oversized look.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">👖</div>
+                        <div class="tip-content">
+                            <h4>Celana</h4>
+                            <p>Ukuran angka = lingkar pinggang dalam inch. 28 = 71cm, 30 = 76cm, dst.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🧥</div>
+                        <div class="tip-content">
+                            <h4>Jacket</h4>
+                            <p>Pilih 1 size bigger jika ingin memakai sweater atau hoodie didalamnya.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">⚽</div>
+                        <div class="tip-content">
+                            <h4>Baju Bola</h4>
+                            <p>Biasanya athletic fit. Size up jika ingin lebih loose dan nyaman.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang HAVEN</h2>
+                    <p>HAVEN hadir sejak 2024 dengan misi memberikan pengalaman berbelanja fashion yang tak terlupakan.
+                        Kami percaya bahwa fashion yang baik dapat meningkatkan kepercayaan diri dan menciptakan momen
+                        berharga.</p>
+                    <p>Dengan bahan-bahan pilihan dan desain yang terus dikembangkan, kami berkomitmen untuk memberikan
+                        yang terbaik untuk pelanggan setia HAVEN.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500" alt="Toko HAVEN">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Kunjungi Kami</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Jl. Fashion No. 123, KOTA BIMA</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>0823-3954-82672</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>hello@haven.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Buka Setiap Hari: 08.00 - 22.00 WIB</p>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sMonumen%20Nasional!5e0!3m2!1sen!2sid!4v1643013459633!5m2!1sen!2sid"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HAVEN FASHION</h3>
+                    <p>Style Your Perfect Look</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#menu">Koleksi</a></li>
+                        <li><a href="index.html#size-guide">Panduan Ukuran</a></li>
+                        <li><a href="index.html#about">Tentang Kami</a></li>
+                        <li><a href="index.html#contact">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="jacket.html">Jacket</a></li>
+                        <li><a href="celana.html">Celana</a></li>
+                        <li><a href="kaos.html">Kaos</a></li>
+                        <li><a href="bajubola.html">Baju bola</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-headset"></i> Customer Service 24/7</p>
+                        <p><i class="fas fa-shipping-fast"></i> Gratis Ongkir</p>
+                        <p><i class="fas fa-shield-alt"></i> Garansi 30 Hari</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 HAVEN FASHION. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <button class="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items akan ditambahkan secara dinamis -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Keranjang belanja Anda kosong</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span>Rp 0</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login ke Akun Anda</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn primary">Login</button>
+                <p class="form-footer">
+                    Belum punya akun? <a href="#" class="switch-to-register">Daftar di sini</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Daftar Akun Baru</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="registerName">Nama Lengkap</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Nomor Telepon</label>
+                    <input type="tel" id="registerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Konfirmasi Password</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn primary">Daftar</button>
+                <p class="form-footer">
+                    Sudah punya akun? <a href="#" class="switch-to-login">Login di sini</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Profil Saya</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="profile-content">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/100" alt="Avatar" id="profileAvatar">
+                        <button class="change-avatar-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h4 id="profileName">Nama Pengguna</h4>
+                        <p id="profileEmail">email@example.com</p>
+                        <p id="profilePhone">+62 812-3456-7890</p>
+                    </div>
+                </div>
+
+                <form class="profile-form">
+                    <div class="form-section">
+                        <h4>Informasi Pribadi</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileNameInput">Nama Lengkap *</label>
+                                <input type="text" id="profileNameInput" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePhoneInput">Nomor Telepon *</label>
+                                <input type="tel" id="profilePhoneInput" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileEmailInput">Email *</label>
+                            <input type="email" id="profileEmailInput" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileBirthDate">Tanggal Lahir</label>
+                            <input type="date" id="profileBirthDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Jenis Kelamin</label>
+                            <div class="gender-options">
+                                <label class="option-card">
+                                    <input type="radio" name="gender" value="male">
+                                    <div class="option-content">
+                                        <i class="fas fa-male"></i>
+                                        <span>Laki-laki</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="gender" value="female">
+                                    <div class="option-content">
+                                        <i class="fas fa-female"></i>
+                                        <span>Perempuan</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Alamat Utama</h4>
+                        <div class="form-group">
+                            <label for="profileAddress">Alamat Lengkap *</label>
+                            <textarea id="profileAddress" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileProvince">Provinsi</label>
+                                <input type="text" id="profileProvince">
+                            </div>
+                            <div class="form-group">
+                                <label for="profileCity">Kota</label>
+                                <input type="text" id="profileCity">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileDistrict">Kecamatan</label>
+                                <input type="text" id="profileDistrict">
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePostalCode">Kode Pos</label>
+                                <input type="text" id="profilePostalCode">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Ubah Password</h4>
+                        <div class="form-group">
+                            <label for="currentPassword">Password Saat Ini</label>
+                            <input type="password" id="currentPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">Password Baru</label>
+                            <input type="password" id="newPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Konfirmasi Password Baru</label>
+                            <input type="password" id="confirmNewPassword">
+                        </div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <button type="button" class="btn secondary cancel-profile">Batal</button>
+                        <button type="submit" class="btn primary save-profile">Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Checkout Pesanan</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="checkout-content">
+                <!-- Ringkasan Pesanan -->
+                <div class="order-summary">
+                    <h4>Ringkasan Pesanan</h4>
+                    <div class="summary-items">
+                        <!-- Items akan diisi secara dinamis -->
+                    </div>
+                    <div class="summary-total">
+                        <strong>Total: Rp <span class="total-amount">0</span></strong>
+                    </div>
+                </div>
+
+                <!-- Form Data Pengiriman -->
+                <form class="checkout-form">
+                    <div class="form-section">
+                        <h4>Data Diri</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customerName">Nama Lengkap *</label>
+                                <input type="text" id="customerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerPhone">No. Telepon *</label>
+                                <input type="tel" id="customerPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Email</label>
+                            <input type="email" id="customerEmail">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Metode Pengambilan</h4>
+                        <div class="delivery-options">
+                            <label class="option-card">
+                                <input type="radio" name="deliveryMethod" value="takeaway" checked>
+                                <div class="option-content">
+                                    <i class="fas fa-store"></i>
+                                    <span>Take Away</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="deliveryMethod" value="delivery">
+                                <div class="option-content">
+                                    <i class="fas fa-motorcycle"></i>
+                                    <span>Delivery</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Form Alamat (muncul jika delivery dipilih) -->
+                        <div class="delivery-address" style="display: none;">
+                            <div class="form-group">
+                                <label for="deliveryAddress">Alamat Lengkap *</label>
+                                <textarea id="deliveryAddress" rows="3"
+                                    placeholder="Masukkan alamat lengkap pengiriman"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryNote">Catatan untuk Kurir</label>
+                                <textarea id="deliveryNote" rows="2"
+                                    placeholder="Contoh: Rumah warna hijau, dekat warung"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Metode Pembayaran</h4>
+                        <div class="payment-options">
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="cash" checked>
+                                <div class="option-content">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Cash</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="qris">
+                                <div class="option-content">
+                                    <i class="fas fa-qrcode"></i>
+                                    <span>QRIS</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="bank_transfer">
+                                <div class="option-content">
+                                    <i class="fas fa-university"></i>
+                                    <span>Transfer Bank</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="paymentMethod" value="ewallet">
+                                <div class="option-content">
+                                    <i class="fas fa-wallet"></i>
+                                    <span>E-Wallet</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button type="button" class="btn secondary back-to-cart">Kembali ke Keranjang</button>
+                        <button type="submit" class="btn primary proceed-payment">Lanjutkan ke Pembayaran</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Pembayaran</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="payment-content">
+                <div class="payment-instruction">
+                    <h4>Silakan selesaikan pembayaran Anda</h4>
+                    <div class="payment-details">
+                        <!-- Detail pembayaran akan diisi berdasarkan metode yang dipilih -->
+                    </div>
+                </div>
+                <div class="payment-actions">
+                    <button type="button" class="btn secondary cancel-payment">Batalkan</button>
+                    <button type="button" class="btn primary confirm-payment">Saya Sudah Bayar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
